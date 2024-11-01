@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="index">
+        <div class="title" style="text-align: center;">
+            Trời sáng
+        </div>
+        <div style="text-align: center;">
+            <img class="image" src="matroi.jpg" style="width: 100px;">
+        </div>
+
+        <div class="mode" style="text-align: center;">
+            <button onclick="doiCheDo()">Đổi chế độ</button>
+        </div>
+    </div>
+    <script>
+        var troiSang = true;
+        function doiCheDo() {
+            if (troiSang == true) {
+                document.getElementsByClassName('title')[0].innerHTML = "Trời tối";
+                document.getElementsByClassName('image')[0].src='mattrang.jpg';
+                document.getElementsByTagName('body')[0].style = "background-color: black;"
+                document.getElementsByClassName('title')[0].style = "color: pink; text-align: center;"
+                troiSang = false;
+            }
+            else {
+                document.getElementsByClassName('title')[0].innerHTML = "Trời sáng";
+                document.getElementsByClassName('image')[0].src = "matroi.jpg";
+                document.getElementsByTagName('body')[0].style = "background-color: white;"
+                document.getElementsByClassName('title')[0].style = "color: black; text-align: center;"
+                troiSang = true;
+        }
+    }
+    </script>
+</body>
+</html>
